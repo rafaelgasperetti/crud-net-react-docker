@@ -1,0 +1,62 @@
+//Borda Padrao
+
+@use "sass:meta";
+
+@mixin border($borderWidth: null, $borderColor: null, $borderStyle: null){
+	border: $borderWidth $borderColor $borderStyle;
+
+	@if $borderWidth != null {
+		$borderWidth: $borderWidth;
+	}
+
+	@if $borderStyle != null {
+		$borderStyle: $borderStyle;
+	}
+}
+@mixin border-bottom($borderWidth: 1px, $borderColor: null, $borderStyle: solid){
+	border-bottom: $borderWidth $borderColor $borderStyle;
+
+	@if $borderWidth != 1px {
+		$borderWidth: $borderWidth;
+	}
+
+	@if $borderStyle != solid {
+		$borderStyle: $borderStyle;
+	}
+}
+
+@mixin border-top($borderWidth: 1px, $borderColor: null, $borderStyle: solid){
+	border-top: $borderWidth $borderColor $borderStyle;
+
+	@if $borderWidth != 1px {
+		$borderWidth: $borderWidth;
+	}
+
+	@if $borderStyle != solid {
+		$borderStyle: $borderStyle;
+	}
+}
+
+@mixin border-left($borderWidth: 1px, $borderColor: null, $borderStyle: solid){
+	border-left: $borderWidth $borderColor $borderStyle;
+
+	@if $borderWidth != 1px {
+		$borderWidth: $borderWidth;
+	}
+
+	@if $borderStyle != solid {
+		$borderStyle: $borderStyle;
+	}
+}
+
+@mixin border-right($borderWidth: 1px, $borderColor: null, $borderStyle: solid){
+	border-right: $borderWidth $borderColor$borderStyle;
+
+	@if $borderWidth != 1px {
+		$borderWidth: $borderWidth;
+	}
+
+	@if $borderStyle != solid {
+		$borderStyle: $borderStyle;
+	}
+}

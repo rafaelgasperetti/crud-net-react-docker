@@ -1,0 +1,32 @@
+// Gerador de Fonts(tamanho) - http://codepen.io/carlosvs/pen/FoGnj
+
+// Tamanho padrão das fontes
+$font-size-base:		14px; // Tamanho base, o que vai no "body"
+$font-title-base:		42px; // Tamanho base para títulos
+
+// Espessura das fontes
+$lighter:				300;
+$normal:				500;
+$semi-bold:				600;
+$bold:					700;
+$extra-bold:			800;
+
+// Fontes para blocos de textos
+$font-size-xxs:			math.ceil($font-size-base * 0.70); // 10
+$font-size-xs:			math.ceil($font-size-base * 0.85); // 12
+$font-size-sm:			$font-size-base; // 14
+$font-size-md:			math.floor($font-size-base * 1.15); // 16
+$font-size-lg:			math.floor($font-size-base * 1.30); // 18
+$font-size-xlg:			math.floor($font-size-base * 1.45); // 20
+
+// Fontes para títulos
+$font-size-h1:			$font-title-base; // 42
+$font-size-h2:			math.ceil($font-size-h1 * 0.87); // 37
+$font-size-h3:			math.ceil($font-size-h1 * 0.74); // 32
+$font-size-h4:			math.ceil($font-size-h1 * 0.61); // 26
+$font-size-h5:			math.ceil($font-size-h1 * 0.48); // 21
+$font-size-h6:			math.ceil($font-size-h1 * 0.35); // 15
+
+// Font de ícones
+$font-size-ico-1:		45px;
+$font-size-ico-2:		47px;

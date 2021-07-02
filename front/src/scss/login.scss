@@ -1,0 +1,51 @@
+@import './general';
+
+#painellogin {
+  max-width: 20%;
+  background-size: cover;
+  background-position: center;
+
+  .painellogin__box {
+    margin-top: 20px;
+    background: $white;
+    height: 360px;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+
+    @include respond-above(md) {
+      width: 360px;
+    }
+
+    form {
+      flex-direction: column;
+
+      #acessarlogin {
+        @extend %button-main;
+        width: 100%;
+      }
+    }
+
+    .painellogin__image {
+      text-align: center;
+      background: $color-1-500;
+
+        img {
+          width: 280px;
+        }
+    }
+
+    .painellogin__form {
+      padding: 20px;
+
+      input {
+        background: $white;
+        border-radius: 0;
+      }
+    }
+  } 
+}

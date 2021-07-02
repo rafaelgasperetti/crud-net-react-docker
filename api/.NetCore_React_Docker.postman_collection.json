@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "3f02ed45-43b2-45b5-8377-fe3865f135c7",
+		"name": ".NetCore_React_Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EfetuarLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Login\" : \"TesteBackEnd\",\r\n\t\"Senha\" : \"Teste123\",\r\n\t\"ChaveAPI\": \"7d3c01ae-d986-4af3-9ebe-f930fbc15bbc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:49957/Login/EfetuarLogin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "49957",
+					"path": [
+						"Login",
+						"EfetuarLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObterDados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiVGVzdGVCYWNrRW5kIiwiVGVzdGUxMjMiLCI3LzIvMjAyMSA1OjE1OjIxIFBNIiwiN2QzYzAxYWUtZDk4Ni00YWYzLTllYmUtZjkzMGZiYzE1YmJjIl0sIm5iZiI6MTYyNTI1NjkyMSwiZXhwIjoxNjI1NDcyOTIxLCJpYXQiOjE2MjUyNTY5MjF9.SQA90B1TwN424CqPXbA-SCyZ_VM80rBLqRwZJQlAbK8\",\r\n\t\"Esquema\" : \"dbo\",\r\n\t\"Tabela\" : \"Produto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49958/Dados/ObterDados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49958",
+					"path": [
+						"Dados",
+						"ObterDados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnviarDados - Produto (IU)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiVGVzdGVCYWNrRW5kIiwiVGVzdGUxMjMiLCI3LzIvMjAyMSAyOjEwOjA1IFBNIiwiN2QzYzAxYWUtZDk4Ni00YWYzLTllYmUtZjkzMGZiYzE1YmJjIl0sIm5iZiI6MTYyNTI0NTgwNSwiZXhwIjoxNjI1NDYxODA1LCJpYXQiOjE2MjUyNDU4MDV9.EQUYzrCmPM1lmEEeszGk2sCJk-ZJNA-P-cxTKYY_b-k\",\r\n\t\"Esquema\" : \"dbo\",\r\n\t\"Tabela\" : \"Produto\",\r\n    \"Operacao\": 1,\r\n    \"Data\": {\r\n        \"Nome\": \"Biscoito2\",\r\n        \"Descricao\": \"Biscoito de Polvilho2\",\r\n        \"Valor\": 150.23\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49958/Dados/EnviarDados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49958",
+					"path": [
+						"Dados",
+						"EnviarDados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnviarDados - Produto (D)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiVGVzdGVCYWNrRW5kIiwiVGVzdGUxMjMiLCI3LzIvMjAyMSAyOjEwOjA1IFBNIiwiN2QzYzAxYWUtZDk4Ni00YWYzLTllYmUtZjkzMGZiYzE1YmJjIl0sIm5iZiI6MTYyNTI0NTgwNSwiZXhwIjoxNjI1NDYxODA1LCJpYXQiOjE2MjUyNDU4MDV9.EQUYzrCmPM1lmEEeszGk2sCJk-ZJNA-P-cxTKYY_b-k\",\r\n\t\"Esquema\" : \"dbo\",\r\n\t\"Tabela\" : \"Produto\",\r\n    \"Operacao\": 4,\r\n    \"Data\": {\r\n        \"Id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49958/Dados/EnviarDados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49958",
+					"path": [
+						"Dados",
+						"EnviarDados"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

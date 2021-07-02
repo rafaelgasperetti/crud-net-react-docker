@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+        crud_core_react:
+            ipv4_address: 192.168.0.200
+    depends_on:
+        - sqlserver
+  sqlserver:
+    container_name: sqlserver
+    image: microsoft/mssql-server-windows-developer:latest
+    ports:
+        - "1433:1433"
+    environment:
+        SA_PASSWORD: "SenhaComplexa_12"
+        ACCEPT_EULA: "Y"
+    networks:
+        crud_core_react:
+            ipv4_address: 192.168.0.201
+networks:
+  crud_core_react:
+    name: crud_core_react
+    ipam:
+     config:
+       - subnet: 192.168.0.0/24
+         gateway: 192.168.0.1

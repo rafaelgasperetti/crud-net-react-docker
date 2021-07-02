@@ -1,0 +1,27 @@
+%button-main{
+    display: inline-block;
+    color: $white;
+    outline: none;
+    text-align: center;
+    background: $color-1-500;
+    border: 0;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 19px 30px;
+  
+  
+    &:hover {
+        text-decoration: none;
+        color: $white;
+        background: $color-3-600;
+    }
+  
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $white;
+        background: $color-3-700;
+    }
+  }

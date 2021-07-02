@@ -1,0 +1,29 @@
+@import './#variables/colors';
+// @import './#variables/fonts';
+@import './#variables/global';
+@import './#variables/media-queries.scss';
+
+/* Mixins */
+@import './#mixins/border';
+
+
+/* Extends */
+@import './#extends/button-main';
+
+
+body {
+  font-family: $main-font;
+  font-size: 1.6rem;
+}
+
+.container {
+	@include respond-above(lg) {
+		width: 90%;
+		max-width: 1300px;
+		min-width: 1300px - 30;
+	}
+}
+
+.row {
+  width: 100%;
+}

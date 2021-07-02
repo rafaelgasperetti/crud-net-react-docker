@@ -4,3 +4,5 @@
 
 /api/.vs/api/v16
 /api/obj
+/api/bin
+/front/node_modules

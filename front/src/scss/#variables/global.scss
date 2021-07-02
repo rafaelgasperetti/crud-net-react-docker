@@ -1,0 +1,50 @@
+//------------------------------------------------------------------------
+//                                BODY
+//------------------------------------------------------------------------
+
+
+// Propriedades do plano de fundo (pode inserir cor, img e etc)
+$body-background:							$body-color;
+
+// Fonte do projeto
+$main-font:									'Roboto', sans-serif;
+// $main-font: "Open Sans", "Helvetica Neue", "sans-serif", Helvetica, Arial;
+
+ // Ícones padrões
+$icon-font-family:							'Font Awesome\ 5 Free';
+// Tamanho do layout
+$layout-width:								980px;
+
+// Prefixo padrão do diretório /arquivos/
+$files-dir:									"//testefront.com.br";
+
+
+//------------------------------------------------------------------------
+//                             SISTEMA
+//------------------------------------------------------------------------
+// Mixin: Loading background
+$mixin-loading-image:						"ajax-loader.gif";
+$mixin-loading-position:					center center;
+$mixin-loading-bg-color:					transparent;
+// Loading da plataforma
+$loading-position:							90px center;
+$loading-bg-color:							$alert-1;
+$loading-image:								$mixin-loading-image;
+
+
+//------------------------------------------------------------------------
+//                        HEADER / FOOTER
+//------------------------------------------------------------------------
+
+//------------------------------------------------------------------------
+//                             GERAL
+//------------------------------------------------------------------------
+$border-radius:								8px;
+$search-input-width: 						655px;
+
+
+//------------------------------------------------------------------------
+//                             CHECKOUT
+//------------------------------------------------------------------------
+$checkout-xs-padding:						20px;
+$checkout-btn-identification-email-width:	145px;
