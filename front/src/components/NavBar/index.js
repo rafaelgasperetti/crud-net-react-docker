@@ -11,6 +11,9 @@ const NavBar = () => {
                     <li key={`menu-produtos`} className="nav_sub-menu_item">
                         {createElement('a', { href: `/produtos`, className: "nav_sub-menu_link", key:`nav-´produtos-a` }, `Produtos`)}
                     </li>
+                    <li key={`menu-produtos-terceiros`} className="nav_sub-menu_item">
+                        {createElement('a', { href: `/produtos-terceiros`, className: "nav_sub-menu_link", key:`nav-´produtos-a` }, `Produtos de Terceiros`)}
+                    </li>
                 </ul>
             </nav>
         </div>

@@ -13,6 +13,8 @@ import Unauthorized from './pages/Unauthorized';
 import Login from './pages/Login';
 import Produtos from './pages/Produtos';
 import Produto from './pages/Produto';
+import ProdutosTerceiros from './pages/ProdutosTerceiros';
+import ProdutoTerceiro from './pages/ProdutoTerceiro';
 import { getItemSession } from './utils';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <>
             <Route key={`imoveis-route`} exact path="/produtos" component={Produtos} />
             <Route key={`imovel-route`} exact path="/produto/:id" component={Produto} />
+            <Route key={`imoveis-route`} exact path="/produtos-terceiros" component={ProdutosTerceiros} />
+            <Route key={`imovel-route`} exact path="/produto-terceiro/:id" component={ProdutoTerceiro} />
             <Route key={`logout-route`} exact path="/logout" component={Logout} />
           </>
         ]}
