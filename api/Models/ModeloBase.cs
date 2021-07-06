@@ -28,5 +28,13 @@ namespace api.Models
         public abstract string ObterQuery(List<ParametroSQL> parametros = null, int? pagina = null, int? resultadosPorPagina = null, int? limite = null, bool ordemAleatoria = false);
 
         public abstract List<ParametroEsperado> ParametrosEsperadosSelect();
+
+        public abstract string LinkConsultaTerceiros();
+
+        public abstract string RetornoMensagemTerceiros();
+
+        public abstract string RetornoDadosTerceiros();
+
+        public abstract List<Tuple<string, string>> Conversor();
     }
 }

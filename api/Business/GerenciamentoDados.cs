@@ -13,7 +13,7 @@ namespace api.Business
 {
     public class GerenciamentoDados
     {
-        private static readonly string BaseModelFolder = "api.Models";
+        public static readonly string BaseModelFolder = "api.Models";
 
         public enum OperacaoEnvioDados
         {

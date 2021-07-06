@@ -116,5 +116,40 @@ namespace api.Controllers
                 };
             }
         }
+
+        [HttpPost]
+        public Resposta ObterDadosTerceiros([FromServices] IMemoryCache cache, [FromBody] DadosRequest request)
+        {
+            try
+            {
+                Resposta sessao = ValidarSessao(request, cache);
+
+                if (sessao.Codigo != (int)HttpStatusCode.OK)
+                {
+                    return sessao;
+                }
+
+                if (request == null)
+                {
+                    return new Resposta()
+                    {
+                        Codigo = (int)HttpStatusCode.BadRequest,
+                        CodigoInterno = (int)Helper.Helper.CodigoInterno.TabelaInexistente,
+                        Status = "A requisição de dados está nula."
+                    };
+                }
+
+                return DadosTerceiros.ObterDados(request);
+            }
+            catch (Exception e)
+            {
+                return new Resposta()
+                {
+                    Codigo = (int)HttpStatusCode.InternalServerError,
+                    CodigoInterno = (int)Helper.Helper.CodigoInterno.Catch_ObterDados,
+                    Status = e.Message
+                };
+            }
+        }
     }
 }

@@ -18,6 +18,11 @@ namespace api.Models.dbo
         public string Descricao { get; set; }
         public decimal Valor { get; set; }
 
+        public override string LinkConsultaTerceiros()
+        {
+            return "https://no2gru7ua3.execute-api.us-east-1.amazonaws.com/";
+        }
+
         public override string ObterQuery(List<ParametroSQL> parametros = null, int? pagina = null, int? resultadosPorPagina = null, int? limite = null, bool ordemAleatoria = false)
         {
             string sql =  @"SELECT  *
@@ -57,6 +62,26 @@ namespace api.Models.dbo
                 new ParametroEsperado("IdProduto", false),
                 new ParametroEsperado("Nome", false),
                 new ParametroEsperado("Descricao", false)
+            };
+        }
+
+        public override string RetornoDadosTerceiros()
+        {
+            return "produtos";
+        }
+
+        public override string RetornoMensagemTerceiros()
+        {
+            return "mensagem";
+        }
+
+        public override List<Tuple<string, string>> Conversor()
+        {
+            return new List<Tuple<string, string>>()
+            {
+                Tuple.Create("produto", "Nome"),
+                Tuple.Create("produto", "Descricao"),
+                Tuple.Create("valor", "Valor")
             };
         }
     }

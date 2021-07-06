@@ -25,7 +25,10 @@ namespace api.Helper
             Catch_ValidarLogin = 9,
             Catch_EfetuarLogin = 10,
             OperacaoInexistente = 11,
-            ErroValidacao = 12
+            ErroValidacao = 12,
+            ErroWebClient = 13,
+            ErroWebClientNoResponse = 14,
+            ErroWebCall = 15
         }
 
         public static string Replicar(string str, int qtd)
